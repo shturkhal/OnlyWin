@@ -6,13 +6,20 @@
 //
 
 import SwiftUI
+import WebKit
 
-struct WebScreenView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+struct WebScreenView: UIViewRepresentable {
+    let url: String
+    
+    func makeUIView(context: Context) -> WKWebView {
+        return WKWebView()
+    }
+    
+    func updateUIView(_ uiView: WKWebView, context: Context) {
+        if let requestUrl = URL(string: url) {
+            let request = URLRequest(url: requestUrl)
+            uiView.load(request)
+        }
     }
 }
 
-#Preview {
-    WebScreenView()
-}
