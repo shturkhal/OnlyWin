@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct CardsView: View {
-    
+
     @Environment(\.dismiss) private var dismiss
     @ObservedObject var viewModel: CardsViewModel
 

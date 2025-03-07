@@ -9,21 +9,13 @@ import SwiftUI
 
 @main
 struct OnlyWinApp: App {
-//    var body: some Scene {
-//        WindowGroup {
-//            ContentView()
-//        }
-//    }
-    
     
     @State private var isAppReady = false
-//    @StateObject private var viewModel = ConViewModel()
     
     var body: some Scene {
         WindowGroup {
             if isAppReady {
                 ContentView()
-//                    .environmentObject(viewModel)
             } else {
                 SplashScreenView()
                     .onAppear {
