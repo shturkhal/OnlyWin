@@ -44,7 +44,7 @@ struct MainScreenView: View {
                         .shadow(color: .black, radius: 5)
                 }
                 .fullScreenCover(isPresented: $showImagesView) {
-                    CardsView()
+                    CardsView(viewModel: CardsViewModel()) 
                 }
             }
         }
